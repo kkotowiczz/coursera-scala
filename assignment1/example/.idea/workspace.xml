@@ -212,12 +212,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1556823660552</updated>
-      <workItem from="1556823661905" duration="2276000" />
+      <workItem from="1556823661905" duration="2917000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2276000" />
+    <option name="totallyTimeSpent" value="2917000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1035" extended-state="6" />
@@ -239,7 +239,7 @@
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4994664" visible="true" weight="0.32967034" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4994664" weight="0.32967034" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
