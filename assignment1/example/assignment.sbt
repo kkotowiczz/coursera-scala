@@ -1,7 +1,9 @@
+enablePlugins(StudentPlugin)
+
 course := "progfun1"
 assignment := "example"
 
-assignmentInfo := AssignmentInfo(
+assignmentInfo := ch.epfl.lamp.AssignmentInfo(
   key = "g4unnjZBEeWj7SIAC5PFxA",
   itemId = "xIz9O",
   premiumItemId = None,

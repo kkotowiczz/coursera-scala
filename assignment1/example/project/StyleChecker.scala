@@ -1,6 +1,6 @@
-import sbt.File
-import java.io.ByteArrayOutputStream
-import java.io.PrintStream
+package ch.epfl.lamp.grading
+
+import java.io.{ByteArrayOutputStream, PrintStream, File}
 import org.scalastyle._
 import com.typesafe.config.ConfigFactory
 
@@ -8,9 +8,7 @@ object StyleChecker {
   val maxResult = 100
 
   class CustomTextOutput[T <: FileSpec](stream: PrintStream) extends Output[T] {
-    // Use the parent class loader because sbt runs our code in a class loader that does not
-    // contain the reference.conf file
-    private val messageHelper = new MessageHelper(ConfigFactory.load(getClass.getClassLoader.getParent))
+    private val messageHelper = new MessageHelper(ConfigFactory.load(getClass.getClassLoader))
 
     var fileCount: Int = _
     override def message(m: Message[T]): Unit = m match {
