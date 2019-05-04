@@ -7,7 +7,7 @@ import org.scalatest.junit.JUnitRunner
 class RecFunSuite
   extends BalanceSuite
     with PascalSuite
-    with CountChangeSuite
+//    with CountChangeSuite
 
 
 
