@@ -2,20 +2,29 @@
 
 object classes {
   class Rational(val x: Int, val y: Int) {
-    def numer = x
-    def denom = y
+    require(y != 0, "denominator must be nonzero")
+
+    private def gcd(a: Int, b: Int): Int = if (b == 0) a else gcd(b, a % b)
+    private val g = gcd(x, y)
+    def this(x: Int) = this(x, 1)
+    def numer = x / g
+    def denom = y / g
+
+    def < (that: Rational) = numer * that.denom < that.numer * denom
+
+    def max(that: Rational) = if(this < that) that else this
 
     override def toString: String = s"$x / $y"
 
-    def add(that: Rational) =
+    def + (that: Rational) =
       new Rational(
         numer * that.denom + that.numer * denom,
         denom * that.denom
       )
 
-    def neg: Rational = new Rational(-numer, denom)
+    def unary_- : Rational = new Rational(-numer, denom)
 
-    def sub(that: Rational) = add(that.neg)
+    def - (that: Rational) = this + -that
   }
 
   val x = new Rational(1, 2)
@@ -29,5 +38,8 @@ object classes {
   val y1 = new Rational(5, 7)
   val z1 = new Rational(3, 2)
 
-  x1.sub(y1).sub(z1)
+  x1 - y1 - z1
+
+  x < y
+  x1 max y1
 }
