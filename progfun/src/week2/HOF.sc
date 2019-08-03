@@ -6,5 +6,5 @@ object exercise2 {
     loop(a, 0)
   }
 
-  sum((x: Int) => x * x, 5, 30)
+  sum(x => x * x, 5, 35)
 }
